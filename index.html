@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10152a">
+  <meta name="description" content="Kathi Quiz – Dein Allgemeinwissenstraining mit Bildern und Lernwiederholungen.">
+  
+  
+  <style>
+:root{color-scheme:dark;--bg:#0b1020;--surface:#151d32;--surface2:#1c2741;--surface3:#25324e;--line:#34415c;--ink:#f6f8ff;--muted:#aab6cf;--accent:#a897ff;--accent2:#66dccf;--accent-ink:#0f1429;--good:#72d9b7;--bad:#ffb2b8;--shadow:0 22px 65px rgba(0,0,0,.18)}
+:root[data-theme="light"]{color-scheme:light;--bg:#f3f5fc;--surface:#fff;--surface2:#f0f2fa;--surface3:#e8eaf5;--line:#dce1f0;--ink:#1b2338;--muted:#5e6b81;--accent:#7660ed;--accent2:#087f72;--accent-ink:white;--good:#126c56;--bad:#ae3447;--shadow:0 20px 55px rgba(58,66,99,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:280px;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.52;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}a{color:var(--accent2);text-underline-offset:3px}.ambient{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;opacity:.2;z-index:-1}.ambient-one{width:450px;height:450px;background:#5d47cb;top:-280px;left:8%}.ambient-two{width:550px;height:550px;background:#196d69;top:330px;right:-320px}.app-shell{max-width:1260px;margin:0 auto;padding:24px 30px 24px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:8px 0 14px}.brand{display:flex;align-items:center;gap:13px;min-width:0}.brand-mark{width:45px;height:45px;border-radius:14px;background:linear-gradient(145deg,#bcb0ff,#615ae2);display:grid;place-items:center;color:#0c1430;font-size:30px;box-shadow:0 7px 28px #625bd047}.brand strong{letter-spacing:.16em;font-size:15px;display:block}.brand small{display:block;color:var(--muted);font-size:12px}.header-actions{display:flex;gap:9px}.icon-button{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:13px;width:44px;height:44px;display:grid;place-items:center;font-size:22px}.icon-button:hover{border-color:var(--accent)}.intro{padding:54px 0 33px;max-width:740px}.kicker{font-weight:800;letter-spacing:.16em;color:var(--accent2);font-size:12px;display:flex;align-items:center;gap:9px}.pulse,.dot-green{height:8px;width:8px;border-radius:50%;background:var(--accent2);display:inline-block;box-shadow:0 0 0 4px #66dccf1c}.intro h1{font-size:clamp(32px,5vw,59px);line-height:1.1;letter-spacing:-.045em;margin:13px 0 14px;font-weight:760}.intro h1 em{font-style:normal;color:var(--accent)}.intro p{max-width:650px;font-size:17px;color:var(--muted);margin:0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:23px;align-items:start}.quiz-area,.sidebar{min-width:0}.quiz-area{padding:25px;border:1px solid var(--line);border-radius:22px;background:var(--surface);box-shadow:var(--shadow)}.round-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:24px}.mini-label,.side-kicker{display:block;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.14em}.round-no{font-size:28px;letter-spacing:-.04em;font-weight:770;margin-top:3px}.score-pill{background:var(--surface3);border:1px solid var(--line);border-radius:15px;padding:7px 14px;font-size:24px;font-weight:800;display:flex;gap:6px;align-items:center;white-space:nowrap}.score-star{color:#f7cf81;font-size:17px}.score-total{color:var(--muted);font-size:16px}.progress-head{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:13px;font-weight:650;margin-bottom:11px}.segments{display:grid;grid-template-columns:repeat(20,1fr);gap:4px;height:7px}.segment{background:var(--surface3);border-radius:5px;min-width:0}.segment.done{background:var(--accent)}.segment.current{background:var(--accent2)}.jumpbar{display:flex;gap:12px;align-items:end;margin:27px 0 20px}.select-wrap{flex:1;min-width:0}.select-wrap label{display:block;font-weight:700;font-size:14px;margin-bottom:8px}.select-wrap select{width:100%;min-width:0;max-width:100%;height:52px;border:1px solid var(--line);border-radius:12px;background:var(--surface2);color:var(--ink);padding:0 12px;font-weight:700;text-overflow:ellipsis}.btn{border-radius:13px;border:1px solid transparent;min-height:51px;padding:13px 19px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:16px;font-weight:760;transition:background .15s,border-color .15s,transform .15s}.btn:active:not(:disabled){transform:translateY(1px)}.btn-primary{background:var(--accent);color:var(--accent-ink)}.btn-primary:hover:not(:disabled){filter:brightness(1.07)}.btn-subtle{color:var(--ink);background:var(--surface2);border-color:var(--line)}.btn-subtle:hover:not(:disabled){background:var(--surface3)}.btn-wide{width:100%}.question-panel{background:var(--surface2);border:1px solid var(--line);border-radius:19px;padding:25px;min-width:0}.question-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.topic{font-size:13px;color:var(--accent2);font-weight:800;letter-spacing:.02em}.pill{border:1px solid var(--line);color:var(--muted);border-radius:30px;padding:4px 10px;font-size:12px;font-weight:700}.review{border-color:#ac915263;background:#b4965430;color:#f5d28c}.question-title{font-size:clamp(22px,2.75vw,30px);line-height:1.34;letter-spacing:-.024em;font-weight:760;margin:0 0 23px;overflow-wrap:anywhere;hyphens:auto}.instructions{font-size:16px;font-weight:700;color:var(--muted);margin:-7px 0 15px}.options{display:flex;flex-direction:column;gap:11px}.option{display:flex;align-items:flex-start;gap:15px;min-height:71px;padding:18px;word-break:normal;overflow-wrap:anywhere;hyphens:auto;text-align:left;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:14px;font-size:18px;font-weight:550;line-height:1.48;width:100%}.option:not(:disabled):hover{border-color:var(--accent)}.option.selected{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface))}.option.is-correct{border-color:var(--good)}.option.is-wrong{border-color:var(--bad)}.option-marker{width:31px;min-width:31px;height:31px;background:var(--surface3);border-radius:9px;display:grid;place-items:center;font-size:15px;font-weight:800;color:var(--ink);margin-top:1px}.option.selected .option-marker{background:var(--accent);color:var(--accent-ink)}.option.is-correct .option-marker{background:var(--good);color:#122329}.option.is-wrong .option-marker{background:var(--bad);color:#32171e}.option-text{min-width:0;flex:1}.panel-actions{margin-top:21px;display:grid;gap:10px}.answer-feedback{margin-top:25px;border-top:1px solid var(--line);padding-top:23px}.feedback-title{font-size:21px;font-weight:800;display:flex;align-items:center;gap:10px;margin-bottom:14px}.feedback-title.good{color:var(--good)}.feedback-title.bad{color:var(--bad)}.feedback-p{font-size:17px;line-height:1.58;margin:10px 0;overflow-wrap:anywhere}.feedback-p strong{color:var(--ink)}.fact{padding:16px 17px;background:var(--surface);border-radius:12px;border:1px solid var(--line);font-size:17px;margin-top:17px;line-height:1.58}.image-card{margin:20px 0 0;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--surface)}.image-card img{width:100%;max-height:440px;object-fit:contain;display:block;background:#121b2a}.image-card figcaption{padding:12px 15px;font-size:13px;color:var(--muted);line-height:1.5}.image-card a{color:var(--accent2)}.image-loading{border:1px solid var(--line);border-radius:13px;padding:18px;font-size:14px;color:var(--muted);margin-top:17px;display:flex;align-items:center;gap:11px}.spinner{height:16px;width:16px;border:2px solid var(--line);border-top-color:var(--accent2);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.result-block{padding:18px 4px 4px}.result-big{font-size:54px;line-height:1.1;letter-spacing:-.05em;font-weight:850;color:var(--accent)}.result-heading{font-size:29px;font-weight:800;margin:7px 0}.result-text{font-size:17px;color:var(--muted)}.result-tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}.result-tag{padding:8px 11px;border-radius:9px;background:var(--surface3);color:var(--ink);font-weight:650;font-size:13px}.result-buttons{display:grid;gap:10px}.side-card{border:1px solid var(--line);border-radius:19px;background:var(--surface);padding:22px;margin-bottom:18px}.big-metric{margin:14px 0 3px;font-size:42px;font-weight:800;letter-spacing:-.06em}.big-metric span{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:0}.side-description,.side-card p{color:var(--muted);font-size:14px;line-height:1.6}.stat-divider{height:1px;background:var(--line);margin:19px 0}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat-grid strong{display:block;font-size:27px}.stat-grid span{color:var(--muted);font-size:12px}.side-title{font-size:17px;font-weight:770;margin-bottom:13px}.history-list{display:flex;flex-direction:column;gap:10px}.history-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}.history-item:last-child{border-bottom:0}.history-item span{color:var(--muted)}.history-item strong{font-size:16px}.history-empty{color:var(--muted);font-size:14px}.source-note{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:15px;margin-top:15px}.status-line{min-height:24px;color:var(--muted);font-size:13px;margin-top:10px}.footer{margin-top:29px;padding:19px 0;display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.modal{width:min(530px,calc(100vw - 28px));max-height:90vh;overflow:auto;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:21px;padding:23px;box-shadow:0 20px 75px #0008}.modal::backdrop{background:#070e1abb;backdrop-filter:blur(4px)}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.modal-head h2{margin:0;font-size:24px}.muted{color:var(--muted)}.muted.small{font-size:13px}.setting-info{padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface2);margin:19px 0;font-size:14px}.setting-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.setting-actions .btn{font-size:14px;flex:1}.import-label{text-align:center;cursor:pointer}.hidden{display:none!important}
+@media(max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}.sidebar{display:grid;grid-template-columns:1fr 1fr;gap:14px}.side-card{margin:0}.help-card{grid-column:1/-1}.intro{padding-top:33px}}
+@media(max-width:600px){.app-shell{padding:12px 13px 25px}.topbar{padding:5px 0 10px}.intro{padding:27px 5px 23px}.intro h1{font-size:35px}.intro p{font-size:15px}.quiz-area{padding:14px;border-radius:16px}.question-panel{padding:17px 13px;border-radius:15px}.question-title{font-size:24px;line-height:1.39}.option{font-size:19px;min-height:75px;padding:16px 13px;gap:12px}.round-no{font-size:26px}.jumpbar{gap:8px}.btn{font-size:16px}.feedback-p,.fact{font-size:17px}.sidebar{grid-template-columns:1fr}.help-card{grid-column:auto}.footer{flex-direction:column;gap:4px}.brand small{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+</style>
+  <title>Kathi Quiz · Allgemeinwissen</title>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark" aria-hidden="true">✦</div><div><strong>KATHI QUIZ</strong><small>Wissen wächst mit jeder Runde.</small></div></div>
+      <div class="header-actions">
+        <button class="icon-button" id="theme-button" aria-label="Farbschema ändern" title="Farbschema ändern">☼</button>
+        <button class="icon-button" id="settings-button" aria-label="Einstellungen öffnen" title="Einstellungen öffnen">⚙</button>
+      </div>
+    </header>
+    <section class="intro">
+      <div class="kicker"><span class="pulse"></span><span id="mode-tag">SPIELBEREIT</span></div>
+      <h1>Jeden Tag ein bisschen <em>schlauer.</em></h1>
+      <p>20 Fragen pro Runde. Lernwiederholungen und passende Bilder erst nach deiner Antwort. Ohne Abo und ohne Zusatzkosten.</p>
+    </section>
+    <main class="layout">
+      <section class="quiz-area" aria-label="Interaktives Quiz">
+        <div class="round-strip">
+          <div><span class="mini-label">AKTUELLE RUNDE</span><div class="round-no" id="round-label">Runde 26</div></div>
+          <div class="score-pill"><span class="score-star">★</span><span id="current-score">0</span><span class="score-total">/ 20</span></div>
+        </div>
+        <div class="progress-head"><span id="progress-title">Frage 1 von 20</span><span id="progress-percentage">0 % abgeschlossen</span></div>
+        <div class="segments" id="segments" aria-label="Fragenfortschritt"></div>
+        <div class="jumpbar">
+          <div class="select-wrap"><label for="question-select">Fragenübersicht</label><select id="question-select" aria-label="Bereits beantwortete Frage auswählen"></select></div>
+          <button id="back-btn" class="btn btn-subtle" aria-label="Zur vorherigen Frage">← <span>Zurück</span></button>
+        </div>
+        <div class="question-panel" id="question-panel" aria-live="polite"></div>
+        <div class="status-line" id="status-line" role="status"></div>
+      </section>
+      <aside class="sidebar">
+        <div class="side-card"><div class="side-kicker">DEIN WISSENSTRAINING</div><div class="big-metric" id="total-answered">0<span> Fragen</span></div><div class="side-description">Seit du diese Web-App nutzt.</div><div class="stat-divider"></div><div class="stat-grid"><div><strong id="overall-rate">–</strong><span>Trefferquote</span></div><div><strong id="finished-rounds">0</strong><span>Runden</span></div></div></div>
+        <div class="side-card"><div class="side-title">Letzte Ergebnisse</div><div id="round-history" class="history-list"></div></div>
+        <div class="side-card help-card"><div class="side-title">So lernst du am besten</div><p>Wiederholungsfragen greifen frühere Fehler in neuem Zusammenhang auf. Nach jeder Antwort kannst du die Erklärung und passende Bilder in Ruhe ansehen.</p><div class="source-note"><span class="dot-green"></span><span id="connection-label">Fragenbank bereit</span></div></div>
+      </aside>
+    </main>
+    <footer class="footer"><span>Kathi Quiz · Deine Fragen, dein Tempo.</span><span>Kostenlos · Dein Fortschritt bleibt in diesem Browser gespeichert.</span></footer>
+  </div>
+  <dialog id="settings-dialog" class="modal"><div class="modal-head"><h2>Einstellungen</h2><button id="close-settings" class="icon-button" aria-label="Schließen">✕</button></div><p class="muted">Die App kostet nichts und benötigt weder Abonnement noch KI-Schlüssel. Deine Antworten bleiben nur in diesem Browser gespeichert. Bildsuchbegriffe werden für die Darstellung echter Bilder an Wikimedia Commons gesendet.</p><div class="setting-info" id="ai-status-text">Kostenloses Quiz verfügbar</div><div class="setting-actions"><label class="btn btn-primary import-label">+ Neue Fragenpakete laden<input type="file" id="questionpack-file" accept="application/json,.json" hidden></label></div><div class="setting-actions"><button class="btn btn-subtle" id="export-btn">Fortschritt exportieren</button><label class="btn btn-subtle import-label">Fortschritt importieren<input type="file" id="import-file" accept="application/json" hidden></label></div><div class="setting-actions"><button class="btn btn-subtle" id="reset-btn">Quizfortschritt zurücksetzen</button></div><p class="muted small">Kostenloses Hosting über GitHub Pages oder Vercel Hobby möglich. Weitere Fragerunden können kostenlos als JSON-Datei ergänzt werden. Für Fotos wird eine Internetverbindung benötigt. Nach Erschöpfung der vorinstallierten Runden entstehen nicht automatisch neue KI-Fragen.</p></dialog>
+  <script>
+/* Aus dem gemeinsamen Kathi Quiz: Runde 26 + zwei neue offline spielbare Runden. */
+window.KATHI_QUIZ_SEED = [
+{number:26,questions:[
+{n:471,topic:'Geografie',kind:'single',q:'An der Grenze welcher beiden afrikanischen Länder liegen die berühmten Victoriafälle?',options:['Kenia und Tansania','Namibia und Botswana','Sambia und Simbabwe','Äthiopien und Eritrea'],answer:[2],fact:'Die Victoriafälle liegen am Sambesi zwischen Sambia und Simbabwe. Ihre Wasserwand ist über 1,7 Kilometer breit und gehört zum UNESCO-Welterbe.',visualQuery:'Victoria Falls waterfall Zambia Zimbabwe aerial',review:false},
+{n:472,topic:'Geschichte',kind:'single',q:'An welchem berühmten Ort wurde im Januar 1871 das Deutsche Kaiserreich ausgerufen?',options:['Im Spiegelsaal von Versailles','Im Wiener Schloss Schönbrunn','In der Frankfurter Paulskirche','Im Berliner Stadtschloss'],answer:[0],fact:'Am 18. Januar 1871 wurde Wilhelm I. im Schloss Versailles zum Deutschen Kaiser proklamiert. Die Zeremonie fand während des Deutsch-Französischen Krieges statt.',visualQuery:'Proclamation German Empire 1871 Versailles painting Anton von Werner',review:false},
+{n:473,topic:'Biologie',kind:'single',q:'Wo werden beim gesunden erwachsenen Menschen die roten Blutkörperchen hauptsächlich gebildet?',options:['In der Milz','In der Leber','In der Bauchspeicheldrüse','Im roten Knochenmark'],answer:[3],fact:'Das rote Knochenmark bildet ständig neue Blutzellen. Rote Blutkörperchen leben im Durchschnitt ungefähr 120 Tage, bevor sie abgebaut werden.',visualQuery:'Bone marrow red blood cell development histology diagram',review:false},
+{n:474,topic:'Physik im Alltag',kind:'single',q:'Warum beschlägt die Außenseite eines Glases, das mit einem eiskalten Getränk gefüllt ist?',options:['Wasser dringt durch das Glas nach außen.','Wasserdampf aus der Umgebungsluft kondensiert auf der kalten Oberfläche.','Das Glas gibt selbst Wassermoleküle ab.','Die Luft verwandelt sich direkt in Eis.'],answer:[1],fact:'Die Luft direkt an der kalten Glasoberfläche kühlt ab. Unterschreitet sie ihren Taupunkt, schlägt sich Wasserdampf als kleine Wassertröpfchen nieder.',visualQuery:'condensation cold glass water droplets',review:false},
+{n:475,topic:'Kunst',kind:'single',q:'Welcher französische Maler schuf 1830 das berühmte Gemälde „Die Freiheit führt das Volk“?',options:['Jacques-Louis David','Claude Monet','Eugène Delacroix','Édouard Manet'],answer:[2],fact:'Eugène Delacroix malte das Werk als Reaktion auf die Julirevolution von 1830. Die personifizierte Freiheit führt darin eine Menschenmenge mit der französischen Trikolore an.',visualQuery:'Liberty Leading the People Eugène Delacroix painting Louvre',review:false},
+{n:476,topic:'Geografie',kind:'multi',q:'Welche zwei dieser Kontinente werden vom südlichen Wendekreis (Wendekreis des Steinbocks) durchquert?',options:['Afrika','Europa','Asien','Südamerika'],answer:[0,3],fact:'Der südliche Wendekreis liegt bei etwa 23,4 Grad südlicher Breite. Er verläuft durch Südamerika, Afrika und Australien, nicht jedoch durch Europa oder Asien.',visualQuery:'Tropic of Capricorn world map',review:false},
+{n:477,topic:'Tierwelt',kind:'tf',q:'Manche Seesterne können einen verlorenen Arm regenerieren.',options:['Richtig','Falsch'],answer:[0],fact:'Viele Seesternarten können beschädigte oder verlorene Arme nachbilden. Je nach Art und Ausmaß der Verletzung dauert die Regeneration Monate oder länger.',visualQuery:'sea star starfish regeneration arm',review:false},
+{n:478,topic:'Politik und Recht',kind:'single',q:'Wie heißt der besondere Schutz von Parlamentsabgeordneten, durch den bestimmte Strafverfolgungsmaßnahmen grundsätzlich einer parlamentarischen Genehmigung bedürfen?',options:['Indemnität','Immunität','Subsidiarität','Petitionsrecht'],answer:[1],fact:'Die parlamentarische Immunität soll die Arbeitsfähigkeit des Parlaments schützen. Sie ist kein allgemeiner Straffreibrief; außerdem gibt es gesetzliche Ausnahmen.',visualQuery:'German Bundestag Reichstag plenary chamber photograph',review:false},
+{n:479,topic:'Wirtschaft',kind:'single',q:'Was bedeutet eine planmäßige Abschreibung in der Buchhaltung?',options:['Der Anschaffungspreis wird unabhängig von der Nutzungsdauer immer sofort vollständig als Gewinn verbucht.','Der Verkaufspreis eines Produkts wird jährlich verdoppelt.','Ein Unternehmen erhält automatisch eine Steuererstattung in Höhe der Anschaffungskosten.','Die Anschaffungskosten eines abnutzbaren Wirtschaftsguts werden über seine Nutzungsdauer verteilt.'],answer:[3],fact:'Eine Maschine wird beispielsweise über mehrere Jahre abgeschrieben. So wird ihr Wertverzehr periodengerecht in der Rechnungslegung erfasst.',visualQuery:'industrial factory machinery production equipment',review:false},
+{n:480,topic:'Computertechnik',kind:'single',q:'Was ist in der Softwareentwicklung eine API?',options:['Eine Schnittstelle, über die Softwareprogramme Funktionen oder Daten austauschen können','Ein spezieller Lüfter zur Kühlung von Grafikkarten','Ein ausschließlich für Fotos verwendetes Dateiformat','Ein Verfahren zur Herstellung von Computerchips'],answer:[0],fact:'API steht für Application Programming Interface. So kann beispielsweise eine Wetter-App Daten von einem Wetterdienst abrufen, ohne dessen internes System kennen zu müssen.',visualQuery:'API web service diagram software interface',review:false},
+{n:481,topic:'Geowissenschaften',kind:'multi',q:'Welche zwei der folgenden Gesteinsumwandlungen können typischerweise durch Metamorphose, also durch Druck und Wärme ohne vollständiges Schmelzen, entstehen?',options:['Kalkstein wird zu Marmor.','Basalt wird zu Kalkstein.','Quarzreicher Sandstein wird zu Quarzit.','Granit wird zu Sandstein.'],answer:[0,2],fact:'Merke dir diese zwei typischen Paare: Kalkstein → Marmor und Sandstein → Quarzit. Metamorphose verändert ein vorhandenes Gestein durch Wärme und Druck, ohne dass es vollständig schmilzt.',visualQuery:'quartzite metamorphic rock specimen geology',review:true},
+{n:482,topic:'Literatur',kind:'single',q:'Welcher französische Schriftsteller schrieb den Abenteuerroman „Die drei Musketiere“?',options:['Victor Hugo','Jules Verne','Alexandre Dumas','Émile Zola'],answer:[2],fact:'Alexandre Dumas veröffentlichte Die drei Musketiere 1844. Der Roman erzählt von d’Artagnan und den Musketieren Athos, Porthos und Aramis.',visualQuery:'The Three Musketeers vintage illustration Alexandre Dumas',review:false},
+{n:483,topic:'Naturwissenschaften',kind:'tf',q:'Wenn man einen gewöhnlichen Regenbogen sieht, befindet sich die Sonne normalerweise vor der beobachtenden Person.',options:['Richtig','Falsch'],answer:[1],fact:'Die Sonne steht beim gewöhnlichen Regenbogen hinter dir, während du in Richtung der Regentropfen blickst. Lichtbrechung, Reflexion und Farbzerlegung erzeugen die farbige Bogenform.',visualQuery:'rainbow landscape double rainbow sky',review:false},
+{n:484,topic:'Chemie und Umwelt',kind:'single',q:'Welche wichtige Funktion besitzt die Ozonschicht in der Stratosphäre?',options:['Sie erzeugt den Sauerstoff aller Pflanzen.','Sie verhindert sämtliche Wetterereignisse.','Sie sorgt dafür, dass die Erde keine Wärme abstrahlt.','Sie absorbiert einen großen Teil der schädlichen ultravioletten Sonnenstrahlung.'],answer:[3],fact:'Stratosphärisches Ozon absorbiert vor allem UV-B- und UV-C-Strahlung. Dadurch schützt es Lebewesen vor einem erheblichen Teil dieser energiereichen Strahlung.',visualQuery:'ozone layer atmosphere ultraviolet rays science illustration',review:false},
+{n:485,topic:'Weltgeschichte',kind:'single',q:'In welchem Jahr brachte die Kubakrise die USA und die Sowjetunion an den Rand eines Atomkriegs?',options:['1956','1962','1968','1973'],answer:[1],fact:'Im Oktober 1962 entdeckten die USA sowjetische Raketenstellungen auf Kuba. Nach einer äußerst gefährlichen Konfrontation einigten sich die beiden Großmächte auf einen Rückzug und weitere Zugeständnisse.',visualQuery:'Cuban missile crisis 1962 aerial reconnaissance missile site',review:false},
+{n:486,topic:'Geografie',kind:'multi',q:'Welche zwei dieser Länder werden vom südlichen Wendekreis durchquert?',options:['Namibia','Spanien','Indien','Chile'],answer:[0,3],fact:'Der südliche Wendekreis verläuft unter anderem durch Namibia und Chile. Der nördliche Wendekreis verläuft dagegen durch Indien.',visualQuery:'Tropic of Capricorn Namibia sign geography',review:false},
+{n:487,topic:'Physik und Technik',kind:'single',q:'Mit welchem Gerät kann man ionisierende Strahlung, beispielsweise bei radioaktiven Stoffen, nachweisen?',options:['Barometer','Spektrometer ausschließlich für sichtbares Licht','Geiger-Müller-Zähler','Hygrometer'],answer:[2],fact:'Ein Geiger-Müller-Zähler registriert ionisierende Strahlung durch elektrische Impulse in einem Zählrohr. Er zeigt häufig die Zählrate oder eine daraus abgeleitete Dosisleistung an.',visualQuery:'Geiger counter radiation measuring device',review:false},
+{n:488,topic:'Musik und Kultur',kind:'multi',q:'Welche zwei dieser bekannten Opern stammen von Giuseppe Verdi?',options:['Aida','Carmen','La traviata','La Bohème'],answer:[0,2],fact:'Giuseppe Verdi komponierte sowohl Aida als auch La traviata. Carmen stammt von Georges Bizet und La Bohème von Giacomo Puccini.',visualQuery:'Aida Giuseppe Verdi opera stage Metropolitan Opera',review:true},
+{n:489,topic:'Geschichte',kind:'multi',q:'Welche zwei Entwicklungen prägten Japan während der Meiji-Zeit ab 1868 besonders?',options:['Der Ausbau moderner Industrie und Eisenbahnverbindungen','Die vollständige Wiederherstellung eines abgeschotteten Shogunats','Die Modernisierung staatlicher Institutionen und des Militärs','Die grundsätzliche Ablehnung westlicher Technik'],answer:[0,2],fact:'Die Meiji-Zeit begann 1868. Japan reformierte Verwaltung, Wirtschaft und Militär und entwickelte sich innerhalb weniger Jahrzehnte zu einer bedeutenden Industriemacht.',visualQuery:'Meiji Japan railway historic woodblock illustration',review:true},
+{n:490,topic:'Chemie und Mineralogie',kind:'single',q:'Ein Korundkristall enthält winzige Spuren eines bestimmten Elements und erhält dadurch die typisch rote Farbe eines Rubins. Um welches Element handelt es sich?',options:['Eisen','Kupfer','Nickel','Chrom'],answer:[3],fact:'Rubin ist die rote Variante des Minerals Korund. Spuren von Chrom verändern die Lichtabsorption des Kristalls und verursachen seine charakteristische rote Farbe.',visualQuery:'raw natural red ruby crystal corundum mineral',review:true}
+]},
+{number:27,questions:[
+{n:491,topic:'Geografie',kind:'single',q:'Welches Land ist für die riesige historische Tempelstadt Bagan mit Tausenden buddhistischen Sakralbauten bekannt?',options:['Thailand','Myanmar','Kambodscha','Laos'],answer:[1],fact:'Bagan liegt am Fluss Irrawaddy in Myanmar. Auf der Ebene stehen Tausende Pagoden und Tempel.',visualQuery:'Bagan temples Myanmar aerial',review:false},
+{n:492,topic:'Geschichte',kind:'single',q:'Welche Epoche folgte in weiten Teilen Europas auf die Bronzezeit?',options:['Steinzeit','Renaissance','Eisenzeit','Neuzeit'],answer:[2],fact:'Mit der Eisenzeit gewann Eisen gegenüber Bronze als Werkstoff für Waffen und Werkzeuge zunehmend an Bedeutung.',visualQuery:'iron age archaeological tools',review:false},
+{n:493,topic:'Biologie',kind:'single',q:'Welches Organ speichert und konzentriert die von der Leber gebildete Gallenflüssigkeit?',options:['Gallenblase','Milz','Bauchspeicheldrüse','Blinddarm'],answer:[0],fact:'Die Gallenblase speichert und konzentriert Galle. Sie gibt diese bei Bedarf in den Dünndarm ab.',visualQuery:'gallbladder liver anatomy diagram',review:false},
+{n:494,topic:'Physik',kind:'single',q:'Warum dehnt sich eine Metallstange normalerweise etwas aus, wenn sie erwärmt wird?',options:['Die Atome werden bei jeder Temperatur kleiner.','Die Stange nimmt spontan zusätzliche Atome auf.','Die elektrischen Ladungen im Metall verschwinden.','Die mittleren Abstände zwischen den Teilchen nehmen zu.'],answer:[3],fact:'Bei steigender Temperatur schwingen die Atome stärker. Durch die asymmetrischen Bindungskräfte vergrößert sich normalerweise ihr mittlerer Abstand: Das Metall dehnt sich aus.',visualQuery:'metal railway expansion joint train tracks thermal expansion',review:false},
+{n:495,topic:'Kunst und Geschichte',kind:'single',q:'Welcher Maler ist für das Gemälde „Die Nachtwache“ bekannt?',options:['Vermeer','Rembrandt','Rubens','Frans Hals'],answer:[1],fact:'Rembrandts Nachtwache entstand 1642 und ist heute im Rijksmuseum Amsterdam zu sehen.',visualQuery:'Rembrandt The Night Watch Rijksmuseum',review:false},
+{n:496,topic:'Geografie',kind:'multi',q:'Welche zwei Städte sind Hauptstädte afrikanischer Staaten?',options:['Dakar','Mombasa','Casablanca','Accra'],answer:[0,3],fact:'Dakar ist die Hauptstadt Senegals, Accra die Hauptstadt Ghanas. Casablanca und Mombasa sind bedeutende Städte, aber keine Hauptstädte.',visualQuery:'Dakar city skyline Senegal',review:false},
+{n:497,topic:'Tierwelt',kind:'tf',q:'Der Schnabel eines Tukans dient unter anderem zur Regulierung seiner Körpertemperatur.',options:['Richtig','Falsch'],answer:[0],fact:'Tukane können über ihre reich durchbluteten Schnäbel Wärme abgeben. Der Schnabel erfüllt darüber hinaus andere Funktionen.',visualQuery:'toucan bird tropical rainforest',review:false},
+{n:498,topic:'Politik',kind:'single',q:'Welches Amt leitet in Deutschland die Bundesregierung?',options:['Bundespräsident','Bundestagspräsident','Bundeskanzler','Bundesratspräsident'],answer:[2],fact:'Der Bundeskanzler bestimmt nach Artikel 65 des Grundgesetzes die Richtlinien der Politik.',visualQuery:'German federal chancellery Berlin architecture',review:false},
+{n:499,topic:'Wirtschaft',kind:'single',q:'Wie nennt man eine Preissteigerung in genau einem Markt, die nicht zwingend alle Waren und Dienstleistungen betrifft?',options:['Relative Preisänderung','Geldschöpfung','Deflation','Staatsbankrott'],answer:[0],fact:'Ein steigender Kaffeepreis allein bedeutet noch keine allgemeine Inflation. Entscheidend ist die Entwicklung eines breiten Preisniveaus.',visualQuery:'coffee beans market stall',review:false},
+{n:500,topic:'Computertechnik',kind:'single',q:'Welcher Bestandteil eines Computers führt die meisten Grafikberechnungen parallel aus?',options:['SSD','Netzteil','Arbeitsspeicher','GPU'],answer:[3],fact:'Grafikprozessoren sind für viele parallele Berechnungen optimiert und werden neben Grafik auch für KI eingesetzt.',visualQuery:'graphics processing unit GPU circuit board',review:false},
+{n:501,topic:'Botanik',kind:'multi',q:'Welche zwei dieser Früchte sind aus botanischer Sicht echte Beeren?',options:['Erdbeere','Tomate','Himbeere','Banane'],answer:[1,3],fact:'Auch wenn der Alltagsname anderes vermuten lässt, sind Tomate und Banane botanisch Beeren; Erdbeere und Himbeere nicht.',visualQuery:'banana and tomato fruit botanical',review:true},
+{n:502,topic:'Literatur',kind:'single',q:'Wer schrieb den Roman „Wer die Nachtigall stört“?',options:['Harper Lee','Virginia Woolf','George Eliot','Toni Morrison'],answer:[0],fact:'Harper Lee veröffentlichte To Kill a Mockingbird 1960. Der Roman behandelt Rassismus und Gerechtigkeit in den Südstaaten der USA.',visualQuery:'To Kill a Mockingbird novel book cover',review:true},
+{n:503,topic:'Astronomie',kind:'tf',q:'Ein roter Stern hat typischerweise eine höhere Oberflächentemperatur als ein blauer Stern.',options:['Richtig','Falsch'],answer:[1],fact:'Bei Sternen deutet blaues Licht typischerweise auf eine höhere Oberflächentemperatur hin; kühlere Sterne erscheinen eher rötlich.',visualQuery:'red and blue stars astronomy comparison',review:false},
+{n:504,topic:'Chemie',kind:'single',q:'Welche Eigenschaft zeigt Lackmuspapier in einer sauren Lösung typischerweise?',options:['Es wird schwarz.','Es bleibt immer farblos.','Es färbt sich rot.','Es leuchtet von selbst.'],answer:[2],fact:'Lackmus ist ein Säure-Base-Indikator. In sauren Lösungen erscheint er rot, in alkalischen blau.',visualQuery:'litmus paper red blue acid base',review:false},
+{n:505,topic:'Kultur',kind:'multi',q:'Welche zwei dieser Feste haben ihren Ursprung in indischen religiösen Traditionen?',options:['Holi','Oktoberfest','Mittsommerfest','Diwali'],answer:[0,3],fact:'Holi ist ein hinduistisch geprägtes Farbenfest, Diwali ein Lichterfest mit großer Bedeutung in mehreren indischen Religionen.',visualQuery:'Holi festival colors people celebration',review:true},
+{n:506,topic:'Geografie',kind:'single',q:'In welchem Land befindet sich der Geirangerfjord, ein bekannter Fjord mit hohen Wasserfällen?',options:['Island','Schweden','Norwegen','Finnland'],answer:[2],fact:'Der Geirangerfjord liegt in Westnorwegen und gehört zusammen mit dem Nærøyfjord zum UNESCO-Welterbe. Seine steilen Berghänge wurden durch Gletscher geformt.',visualQuery:'Geirangerfjord Norway Seven Sisters waterfall',review:false},
+{n:507,topic:'Physik',kind:'single',q:'Was ist bei einer mechanischen Schwingung ihre Amplitude?',options:['Die größte Auslenkung von der Ruhelage','Die Anzahl der Schwingungen je Sekunde','Die gesamte Masse des Körpers','Die zurückgelegte Strecke pro Stunde'],answer:[0],fact:'Die Amplitude gibt die maximale Auslenkung an. Die Frequenz beschreibt dagegen die Anzahl der Schwingungen pro Sekunde.',visualQuery:'pendulum physics classroom',review:false},
+{n:508,topic:'Technik',kind:'multi',q:'Welche zwei Geräte wandeln normalerweise elektrische Energie in mechanische Bewegung um?',options:['Fotovoltaikmodul','Elektromotor','Akkumulator beim Laden','Elektrischer Ventilator'],answer:[1,3],fact:'Elektromotoren setzen elektrische Energie in Bewegungsenergie um. Auch ein elektrischer Ventilator verwendet einen Motor.',visualQuery:'electric motor rotor copper winding',review:false},
+{n:509,topic:'Geschichte',kind:'multi',q:'Welche zwei Ereignisse fanden in der ersten Hälfte des 20. Jahrhunderts statt?',options:['Eröffnung des Panamakanals 1914','Gründung des Deutschen Kaiserreichs 1871','Baubeginn des Suezkanals 1859','Gründung der Volksrepublik China 1949'],answer:[0,3],fact:'Der Panamakanal wurde 1914 eröffnet. Die Volksrepublik China wurde 1949 ausgerufen. Beide Ereignisse fallen in die erste Hälfte des 20. Jahrhunderts (1901–1950).',visualQuery:'Panama Canal opening 1914 historic photograph',review:false},
+{n:510,topic:'Musik',kind:'single',q:'Welche Instrumentengruppe bildet in einem Sinfonieorchester meist den zahlenmäßig größten Teil?',options:['Holzbläser','Blechbläser','Schlagwerk','Streicher'],answer:[3],fact:'Violinen, Bratschen, Violoncelli und Kontrabässe bilden gewöhnlich den größten Teil eines Sinfonieorchesters.',visualQuery:'symphony orchestra string section violins',review:false}
+]}
+];
+
+</script>
+  <script>
+/* Kathi Quiz – vanilla JS, no framework/CDN; API keys never enter the browser. */
+(() => {
+  'use strict';
+  const KEY='kathi-wissensquiz-v1';
+  const $=id=>document.getElementById(id);
+  const initialRounds=window.KATHI_QUIZ_SEED||[];
+  const earlierResults=[{number:25,score:18},{number:24,score:9},{number:23,score:12},{number:22,score:10},{number:21,score:15}];
+  let state=loadState();
+  let imageBusy=new Set();
+  let appStatus={ai:false,model:'',server:false};
+  let creating=false;
+  let transient='';
+
+  function loadState(){
+    try{
+      const v=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(v&&v.version===1&&Array.isArray(v.rounds)&&v.rounds.length&&Number.isInteger(v.current)&&v.current>=0&&v.current<v.rounds.length){
+        v.rounds=v.rounds.filter(r=>Array.isArray(r.questions)&&Array.isArray(r.answers));
+        v.current=Math.min(v.current,v.rounds.length-1);
+        v.imageCache=v.imageCache||{};v.extraSeeds=v.extraSeeds||[];Object.keys(v.imageCache).forEach(k=>{if(v.imageCache[k]?.status==='loading')delete v.imageCache[k]});
+        return v;
+      }
+    }catch(err){console.warn('Konnte Quizstand nicht laden',err)}
+    return {version:1,current:0,rounds:[makeRound(initialRounds[0])],extraSeeds:[],imageCache:{},theme:'dark'};
+  }
+  function makeRound(seed){return {number:seed.number,questions:seed.questions,answers:[],view:0,draft:[],created:new Date().toISOString()}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){transient=e?.name==='QuotaExceededError'?'Der Browserspeicher ist voll. Bitte exportiere deinen Fortschritt.':'Fortschritt wird nur in dieser Sitzung gespeichert. Für dauerhaftes Speichern bitte die Web-App über den lokalen Server starten.'}}
+  function round(){return state.rounds[state.current]}
+  function answered(r){return r.answers.length}
+  function grade(r){return r.answers.filter(a=>a.correct).length}
+  function questionCorrect(q,picks){return picks.length===q.answer.length&&q.answer.every(x=>picks.includes(x))}
+  function text(tag,content,cls){const e=document.createElement(tag);if(cls)e.className=cls;e.textContent=content;return e}
+  function node(tag,cls){let e=document.createElement(tag);if(cls)e.className=cls;return e}
+  function b(label,cls,fn,disabled=false){let e=text('button',label,cls);e.type='button';e.disabled=disabled;if(fn)e.addEventListener('click',fn);return e}
+  function setTheme(t){state.theme=t==='light'?'light':'dark';document.documentElement.dataset.theme=state.theme;$('theme-button').textContent=state.theme==='dark'?'☼':'☾';save()}
+  function newTextPair(container,label,value){let p=node('p','feedback-p');const strong=text('strong',label);p.append(strong,document.createTextNode(' '+value));container.append(p)}
+  function gotoQuestion(i){const r=round();if(i<0||i>Math.min(r.answers.length,19))return;r.view=i;r.draft=[];save();render();}
+  function commit(picks){const r=round();const q=r.questions[r.view];if(r.view!==r.answers.length)return;r.answers.push({picks:[...picks],correct:questionCorrect(q,picks)});r.draft=[];save();render();ensureImage(q)}
+  function setDraft(i){const r=round();if(r.view<r.answers.length)return;const p=r.draft||[];r.draft=p.includes(i)?p.filter(x=>x!==i):p.length<2?[...p,i]:p;save();render()}
+  function getSeeds(){return [...initialRounds,...(state.extraSeeds||[])];}
+  function history(){return [...state.rounds.filter(x=>x.answers.length===20).map(x=>({number:x.number,score:grade(x)})),...earlierResults].sort((a,b)=>b.number-a.number)}
+  function renderStats(){
+    const all=state.rounds.flatMap(r=>r.answers);
+    $('total-answered').replaceChildren(document.createTextNode(String(all.length)),text('span',' Fragen'));
+    $('overall-rate').textContent=all.length?Math.round(all.filter(a=>a.correct).length*100/all.length)+' %':'–';
+    $('finished-rounds').textContent=state.rounds.filter(r=>r.answers.length===20).length;
+    let root=$('round-history');root.replaceChildren();const hs=history();
+    if(!hs.length){root.append(text('div','Hier werden später deine Ergebnisse angezeigt.','history-empty'))}
+    hs.slice(0,5).forEach(x=>{let e=node('div','history-item');e.append(text('span','Runde '+x.number),text('strong',x.score+' / 20'));root.append(e)})
+    $('connection-label').textContent='Kostenlose Quizfragen · ohne Abonnement';
+    $('mode-tag').textContent='KOSTENLOS SPIELEN';
+    $('ai-status-text').textContent='100 % kostenlos: '+getSeeds().length+' Fragenrunden verfügbar. Weitere Runden können als kostenlose JSON-Fragenpakete importiert werden. Kein KI-API-Schlüssel erforderlich.';
+  }
+  function render(){
+    const r=round();const idx=r.view;const q=r.questions[idx],saved=r.answers[idx]||null;
+    const pct=r.answers.length*5;
+    $('round-label').textContent='Runde '+r.number;
+    $('current-score').textContent=grade(r);
+    $('progress-title').textContent='Frage '+(idx+1)+' von 20';
+    $('progress-percentage').textContent=pct+' % abgeschlossen';
+    const bar=$('segments');bar.replaceChildren();for(let i=0;i<20;i++){const el=node('div','segment'+(i<r.answers.length?' done':i===idx?' current':''));el.title=`Frage ${i+1}: ${i<r.answers.length?'beantwortet':'offen'}`;bar.append(el)}
+    const select=$('question-select');select.replaceChildren();for(let i=0;i<=Math.min(19,r.answers.length);i++){
+      const label=i<r.answers.length?(r.answers[i].correct?'✓':'✕'):'▶';
+      const opt=document.createElement('option');opt.value=i;opt.textContent=label+' '+r.questions[i].n+' · '+r.questions[i].topic;select.append(opt)
+    }
+    select.value=String(idx);
+    $('back-btn').disabled=idx===0;
+    const panel=$('question-panel');panel.replaceChildren();
+    const meta=node('div','question-meta');meta.append(text('span',q.topic,'topic'),text('span',q.review?'↺ Lernwiederholung':q.kind==='multi'?'Mehrfachauswahl':q.kind==='tf'?'Richtig / Falsch':'Eine richtige Antwort','pill'+(q.review?' review':'')));panel.append(meta);
+    panel.append(text('h2',q.n+'. '+q.q,'question-title'));
+    if(q.kind==='multi')panel.append(text('p','Wähle genau zwei Antworten aus.','instructions'));
+    let optWrap=node('div','options');const picked=saved?saved.picks:r.draft;
+    q.options.forEach((label,i)=>{
+      let selected=picked.includes(i),good=!!saved&&q.answer.includes(i),wrong=!!saved&&selected&&!good;
+      let option=b('','option'+(selected?' selected':'')+(good?' is-correct':'')+(wrong?' is-wrong':''),()=>q.kind==='multi'?setDraft(i):commit([i]),!!saved);
+      option.setAttribute('aria-pressed',String(selected));
+      const marker=q.kind==='tf'?(i===0?'✓':'✕'):String.fromCharCode(65+i);
+      option.append(text('span',saved?(good?'✓':wrong?'✕':marker):(q.kind==='multi'?(selected?'☑':'□'):marker),'option-marker'),text('span',label,'option-text'));
+      optWrap.append(option)
+    });panel.append(optWrap);
+    if(!saved&&q.kind==='multi'){
+      const act=node('div','panel-actions');act.append(b('Antwort prüfen','btn btn-primary btn-wide',()=>commit([...r.draft]),r.draft.length!==2));panel.append(act);
+    }
+    if(saved){
+      const fb=node('section','answer-feedback');fb.setAttribute('aria-label','Auflösung und Wissensfakt');
+      fb.append(text('div',(saved.correct?'✓ Richtig beantwortet!':'✕ Noch nicht ganz richtig'),'feedback-title '+(saved.correct?'good':'bad')));
+      newTextPair(fb,'Deine Antwort:',saved.picks.map(i=>q.options[i]).join(' und '));
+      newTextPair(fb,'Richtige Lösung:',q.answer.map(i=>q.options[i]).join(' und '));
+      fb.append(text('div',q.fact,'fact'));
+      addImage(fb,q);
+      if(r.answers.length===20&&idx===19){const end=node('div','result-block');end.append(text('div',grade(r)+' / 20','result-big'),text('div','Runde '+r.number+' abgeschlossen!','result-heading'),text('p','Du kannst alle Fragen und Bilder erneut ansehen. Schwierige Fragen kannst du über die Übersicht gezielt wiederholen.','result-text'));
+        const missed=r.questions.filter((q,i)=>!r.answers[i].correct).map(q=>q.n);const tags=node('div','result-tags');tags.append(text('span',missed.length?'Wiederholen: '+missed.join(', '):'Alle Fragen richtig!','result-tag'));end.append(tags);
+        const actions=node('div','result-buttons');actions.append(b(creating?'Neue Runde wird erstellt …':'Runde '+(r.number+1)+' starten →','btn btn-primary btn-wide',nextRound,creating));actions.append(b('Alle Fragen nochmals ansehen','btn btn-subtle btn-wide',()=>gotoQuestion(0)));end.append(actions);fb.append(end);
+      }else if(idx<19){let a=node('div','panel-actions');a.append(b(idx===r.answers.length-1?'Nächste Frage →':'Weiterblättern →','btn btn-primary btn-wide',()=>gotoQuestion(idx+1)));fb.append(a)}
+      panel.append(fb);
+    }
+    if(idx<Math.min(r.answers.length,19)){let act=node('div','panel-actions');act.append(b('⇥ Zur aktuellen Frage','btn btn-subtle btn-wide',()=>gotoQuestion(Math.min(19,r.answers.length))));panel.append(act)}
+    $('status-line').textContent=transient;renderStats();
+  }
+  function addImage(container,q){
+    if(!q.visualQuery)return;
+    const existing=state.imageCache[q.n];
+    if(!existing){const box=node('div','image-loading');box.append(node('span','spinner'),text('span','Passendes Bild wird automatisch gesucht …'));container.append(box);ensureImage(q);return}
+    if(existing.status==='loading'){const box=node('div','image-loading');box.append(node('span','spinner'),text('span','Passendes Bild wird geladen …'));container.append(box);return}
+    if(existing.status==='notfound'){
+      let p=node('p','muted small');p.append('Zu dieser Frage wurde kein eindeutig passendes Foto gefunden. ');
+      const a=text('a','In Wikimedia Commons suchen');a.href='https://commons.wikimedia.org/w/index.php?search='+encodeURIComponent(q.visualQuery)+'&title=Special:MediaSearch&type=image';a.target='_blank';a.rel='noopener noreferrer';p.append(a);container.append(p);return
+    }
+    const fig=node('figure','image-card');const img=document.createElement('img');img.src=existing.url;img.alt='Veranschaulichung zur beantworteten Frage: '+(existing.alt||q.topic);img.loading='eager';img.referrerPolicy='no-referrer';
+    img.addEventListener('error',()=>{state.imageCache[q.n]={status:'notfound'};save();if(round().questions[round().view].n===q.n)render()},{once:true});
+    fig.append(img);let cap=document.createElement('figcaption');cap.append(document.createTextNode((existing.caption||q.topic)+' · '));const src=text('a','Bildquelle ansehen ↗');src.href=existing.source;src.target='_blank';src.rel='noopener noreferrer';cap.append(src);fig.append(cap);container.append(fig);
+  }
+  async function ensureImage(q){
+    if(!q.visualQuery||state.imageCache[q.n]||imageBusy.has(q.n))return;
+    imageBusy.add(q.n);state.imageCache[q.n]={status:'loading'};save();
+    try{
+      const result=await directImageLookup(q.visualQuery);
+      if(!result?.url)result=await directImageLookup(q.visualQuery);
+      if(!result?.url||!/^https:\/\//i.test(result.url)||!/^https:\/\//i.test(result.source))throw Error('no image');
+      state.imageCache[q.n]={status:'ready',url:result.url,source:result.source,alt:result.alt||q.topic,caption:result.caption||q.topic};
+    }catch(e){state.imageCache[q.n]={status:'notfound'}}finally{imageBusy.delete(q.n);save();if(round().questions[round().view].n===q.n)render()}
+  }
+  async function directImageLookup(query){
+    const base='https://commons.wikimedia.org/w/api.php';
+    const params=new URLSearchParams({action:'query',generator:'search',gsrsearch:query,gsrnamespace:'6',gsrlimit:'8',prop:'imageinfo',iiprop:'url|mime|extmetadata',iiurlwidth:'1000',format:'json',origin:'*'});
+    const res=await fetch(base+'?'+params,{signal:AbortSignal.timeout(9000)});
+    if(!res.ok)throw Error('image lookup failed');
+    const data=await res.json();let pages=Object.values(data.query?.pages||{}).sort((a,b)=>(a.index??99)-(b.index??99));
+    for(const page of pages){const info=page.imageinfo?.[0];if(!info?.thumburl||!['image/jpeg','image/png','image/webp'].includes(info.mime))continue;
+      const m=info.extmetadata||{},artist=(m.Artist?.value||'').replace(/<[^>]+>/g,'').slice(0,90),license=(m.LicenseShortName?.value||'').slice(0,35);
+      return {url:info.thumburl,source:info.descriptionurl||'https://commons.wikimedia.org/wiki/'+encodeURIComponent(page.title.replaceAll(' ','_')),caption:[page.title.replace(/^File:/,''),artist,license].filter(Boolean).join(' · '),alt:page.title.replace(/^File:/,'')}
+    }
+    throw Error('no photograph')
+  }
+  function allRecent(){return state.rounds.flatMap(r=>r.questions.map((q,i)=>({n:q.n,q:q.q,correct:r.answers[i]?.correct,answer:q.answer.map(j=>q.options[j]).join(' und '),topic:q.topic}))).sort((a,b)=>b.n-a.n)}
+  async function nextRound(){
+    const r=round();if(r.answers.length!==20||creating)return;
+    const no=r.number+1;
+    const seed=getSeeds().find(x=>x.number===no);
+    if(seed){state.rounds.push(makeRound(seed));state.current=state.rounds.length-1;transient='';save();render();window.scrollTo({top:0,behavior:'smooth'});return}
+    transient='Alle gespeicherten Runden gespielt. Für weitere kostenlose Fragen kannst du über ⚙ ein neues Fragenpaket laden.';
+    render();$('settings-dialog').showModal();
+  }
+  function validatePack(pack){
+    const rounds=Array.isArray(pack)?pack:Array.isArray(pack.rounds)?pack.rounds:[pack];
+    if(!rounds.length||rounds.length>100)throw Error('Das Fragenpaket muss 1 bis 100 Runden enthalten.');
+    for(const r of rounds){
+      if(!Number.isInteger(r.number)||!Array.isArray(r.questions)||r.questions.length!==20)throw Error('Jede Runde benötigt eine Rundennummer und genau 20 Fragen.');
+      if(r.questions.length!==20||new Set(r.questions.map(q=>q.n)).size!==20)throw Error('Fragennummern dürfen sich nicht wiederholen.');
+      const counts={single:0,multi:0,tf:0};
+      for(const q of r.questions){
+        if(!Number.isInteger(q.n)||typeof q.q!=='string'||q.q.length<5||typeof q.fact!=='string'||q.fact.length<5||!Array.isArray(q.options)||!Array.isArray(q.answer)||!(q.kind in counts))throw Error('Einige Fragen enthalten unvollständige Angaben.');
+        if(q.kind==='tf'?(q.options.length!==2||q.answer.length!==1):(q.options.length!==4||q.answer.length!==(q.kind==='multi'?2:1)))throw Error('Die Antworten entsprechen nicht dem Quizformat.');
+        if(q.options.some(o=>typeof o!=='string'||!o)||q.answer.some(i=>!Number.isInteger(i)||i<0||i>=q.options.length)||new Set(q.answer).size!==q.answer.length)throw Error('Ungültige Antwortmöglichkeiten erkannt.');
+        counts[q.kind]++;
+      }
+      if(counts.single!==13||counts.multi!==5||counts.tf!==2)throw Error('Pro Runde sind 13 Einzelauswahl-, 5 Mehrfachauswahl- und 2 Richtig/Falsch-Fragen nötig.');
+    }
+    return rounds;
+  }
+  async function importQuestionPack(file){
+    try{
+      if(file.size>2_000_000)throw Error('Datei zu groß (max. 2 MB).');
+      const rounds=validatePack(JSON.parse(await file.text()));
+      const installed=new Set([...getSeeds().map(x=>x.number),...state.rounds.map(x=>x.number)]);
+      const newOnes=rounds.filter(r=>!installed.has(r.number));
+      if(!newOnes.length)throw Error('Diese Rundennummern sind bereits vorhanden.');
+      state.extraSeeds=[...(state.extraSeeds||[]),...newOnes];save();render();
+      alert(newOnes.length+' kostenlose Fragenrunde(n) geladen! Nach Abschluss der bisherigen Runde verfügbar.');
+      $('settings-dialog').close();
+    }catch(e){alert('Fragenpaket konnte nicht geladen werden: '+e.message)}
+  }
+  function exportData(){let blob=new Blob([JSON.stringify({app:'Kathi Quiz',exported:new Date().toISOString(),state},null,2)],{type:'application/json'});let url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kathi-quiz-fortschritt-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)}
+  async function importData(file){try{if(file.size>2_000_000)throw Error('Datei zu groß');const data=JSON.parse(await file.text()),v=data.state;if(v?.version!==1||!Array.isArray(v.rounds)||!v.rounds.length||!Array.isArray(v.rounds[0].questions)||!Array.isArray(v.rounds[0].answers))throw Error('Unbekanntes Dateiformat');if(!confirm('Den aktuellen Quizfortschritt durch die importierten Daten ersetzen?'))return;localStorage.setItem(KEY,JSON.stringify(v));state=loadState();setTheme(state.theme||'dark');$('settings-dialog').close();render()}catch(e){alert('Import nicht möglich: '+e.message)}}
+  function init(){
+    setTheme(state.theme||'dark');
+    $('theme-button').addEventListener('click',()=>{setTheme(state.theme==='dark'?'light':'dark');render()});
+    $('settings-button').addEventListener('click',()=>$('settings-dialog').showModal());
+    $('close-settings').addEventListener('click',()=>$('settings-dialog').close());
+    $('question-select').addEventListener('change',e=>gotoQuestion(Number(e.target.value)));
+    $('back-btn').addEventListener('click',()=>gotoQuestion(round().view-1));
+    $('export-btn').addEventListener('click',exportData);
+    $('import-file').addEventListener('change',e=>{if(e.target.files?.[0])importData(e.target.files[0]);e.target.value=''});
+    $('questionpack-file').addEventListener('change',e=>{if(e.target.files?.[0])importQuestionPack(e.target.files[0]);e.target.value=''});
+    $('reset-btn').addEventListener('click',()=>{if(!confirm('Wirklich alle in dieser Web-App gespeicherten Antworten und Ergebnisse zurücksetzen?'))return;localStorage.removeItem(KEY);state=loadState();setTheme('dark');$('settings-dialog').close();render()});
+    render();
+
+  }
+  init();
+})();
+
+</script>
+</body>
+</html>
